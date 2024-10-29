@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="left">
+        <app-map 
+        [miningBuffer]="miningBuffer"
+        [ethnicGroupSenegal]="ethnicGroupSenegal"
+        [ethnicGroupCongo]="ethnicGroupCongo"
+        [ethnicGroupKenya]="ethnicGroupKenya"
+        [typeOfViolence]="typeOfViolence"   
+        ></app-map>
+    </div>
+    <div class="right">
+        <app-controls
+        (miningBuffer)="miningBuffer = $event"
+        (ethnicGroupSenegal)="ethnicGroupSenegal = $event"
+        (ethnicGroupCongo)="ethnicGroupCongo = $event"
+        (ethnicGroupKenya)="ethnicGroupKenya = $event"
+        (typeOfViolence)="typeOfViolence = $event"
+        ></app-controls>
+    
+    </div>
+</div>
+
+<router-outlet></router-outlet>

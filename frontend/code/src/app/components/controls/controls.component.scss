@@ -1,0 +1,49 @@
+.container {
+    padding: 20px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.topmargin {
+    margin-top: 20px;
+}
+
+.vertpad {
+    padding-bottom: 10px;
+}
+
+mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    align-items: flex-start;
+}
+
+mat-radio-button {
+    margin: 3px;
+}
+
+mat-form-field {
+    display: flex;
+}
+
+.selection-groups {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-groups {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .mining-areas, .conflict-types {
+    flex: 1;
+  }
+  
+  .ethnic-groups {
+    margin-top: 20px; /* Adjust as needed */
+  }

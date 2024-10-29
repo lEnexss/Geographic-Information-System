@@ -1,0 +1,96 @@
+<mat-card class="container">
+    <h1>Select Layers</h1>
+    <div class="selection-groups">
+      <div class="radio-groups">
+
+        <div class="conflict-types">
+            <h2>Conflict Types</h2>
+            <mat-radio-group (change)="typeOfViolence.emit($event.value)">
+                <mat-radio-button [value]="-1" [checked]="true">None</mat-radio-button>
+                <mat-radio-button [value]="1">State-based</mat-radio-button>
+                <mat-radio-button [value]="2">Non-state</mat-radio-button>
+                <mat-radio-button [value]="3">One-sided</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+
+        <div class="mining-areas">
+            <h2>Mining Areas</h2>
+            <mat-radio-group (change)="miningBuffer.emit($event.value || 0)">
+                <mat-radio-button [value]="-1" [checked]="true">None</mat-radio-button>
+                <mat-radio-button [value]="0">Original Area</mat-radio-button>
+                <mat-radio-button [value]="3">Buffer 3km</mat-radio-button>
+                <mat-radio-button [value]="5">Buffer 5km</mat-radio-button>
+                <mat-radio-button [value]="10">Buffer 10km</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+      </div>
+
+
+      <div>
+        <h2>Ethnic Groups Senegal</h2>
+        <mat-form-field appearance="fill">
+            <mat-label></mat-label>
+            <mat-select [value]="-1" (selectionChange)="ethnicGroupSenegal.emit($event.value || 1)">
+                <mat-option [value]="-1">--None--</mat-option>
+                <mat-option [value]="22">Diola</mat-option>
+                <mat-option [value]="23">Mandingue</mat-option>
+                <mat-option [value]="26">Poular</mat-option>
+                <mat-option [value]="27">Serer</mat-option>
+                <mat-option [value]="28">Soninke</mat-option>
+                <mat-option [value]="29">Wolof</mat-option>
+                <mat-option [value]="25">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div>
+        <h2>Ethnic Groups DRC</h2>
+        <mat-form-field appearance="fill">
+            <mat-label></mat-label>
+            <mat-select [value]="-1" (selectionChange)="ethnicGroupCongo.emit($event.value || 1)">
+                <mat-option [value]="-1">--None--</mat-option>
+                <mat-option [value]="1">Bakongo Nord & Süd</mat-option>
+                <mat-option [value]="2">Bas-kasai & Kwilu-kwngo</mat-option>
+                <mat-option [value]="3">Baselek & Kivu</mat-option>
+                <mat-option [value]="4">Cuvette Central</mat-option>
+                <mat-option [value]="5">Kasai & Katanga & Tanganika</mat-option>
+                <mat-option [value]="6">Lunda</mat-option>
+                <mat-option [value]="7">Ubangi & Itimbiri</mat-option>
+                <mat-option [value]="8">Uele Lac Albert</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+
+    <div>
+        <h2>Ethnic Groups Kenya</h2>
+        <mat-form-field appearance="fill">
+            <mat-label></mat-label>
+            <mat-select [value]="-1" (selectionChange)="ethnicGroupKenya.emit($event.value || 1)">
+                <mat-option [value]="-1">--None--</mat-option>
+                <mat-option [value]="9">Embu</mat-option>
+                <mat-option [value]="10">Kalenjin</mat-option>
+                <mat-option [value]="11">Kamba</mat-option>
+                <mat-option [value]="12">Kikuyu</mat-option>
+                <mat-option [value]="13">Kisii</mat-option>
+                <mat-option [value]="14">Luhya</mat-option>
+                <mat-option [value]="15">Luo</mat-option>
+                <mat-option [value]="16">Masai</mat-option>
+                <mat-option [value]="17">Meru</mat-option>
+                <mat-option [value]="18">Mijikenda & Swahili</mat-option>
+                <mat-option [value]="20">Somali</mat-option>
+                <mat-option [value]="21">Taita & Taveta</mat-option>
+                <mat-option [value]="19">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+      <div id="color-scale-legend">
+      <h3>Percentage of total population</h3>
+      </div>
+    
+  </div>
+
+</mat-card>
